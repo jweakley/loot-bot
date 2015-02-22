@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Raid Boss Kills</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Raid boss</th>
+      <th>Raid</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @raid_boss_kills.each do |raid_boss_kill| %>
+      <tr>
+        <td><%= raid_boss_kill.raid_boss %></td>
+        <td><%= raid_boss_kill.raid %></td>
+        <td><%= link_to 'Show', raid_boss_kill %></td>
+        <td><%= link_to 'Edit', edit_raid_boss_kill_path(raid_boss_kill) %></td>
+        <td><%= link_to 'Destroy', raid_boss_kill, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Raid boss kill', new_raid_boss_kill_path %>

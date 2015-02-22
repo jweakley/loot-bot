@@ -1,0 +1,25 @@
+<%= form_for(@raid_member) do |f| %>
+  <% if @raid_member.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@raid_member.errors.count, "error") %> prohibited this raid_member from being saved:</h2>
+
+      <ul>
+      <% @raid_member.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :character_name %><br>
+    <%= f.text_field :character_name %>
+  </div>
+  <div class="field">
+    <%= f.label :realm %><br>
+    <%= f.text_field :realm %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

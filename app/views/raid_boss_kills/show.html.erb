@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Raid boss:</strong>
+  <%= @raid_boss_kill.raid_boss %>
+</p>
+
+<p>
+  <strong>Raid:</strong>
+  <%= @raid_boss_kill.raid %>
+</p>
+
+<%= link_to 'Edit', edit_raid_boss_kill_path(@raid_boss_kill) %> |
+<%= link_to 'Back', raid_boss_kills_path %>

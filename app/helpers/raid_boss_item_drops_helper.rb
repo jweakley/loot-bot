@@ -1,0 +1,2 @@
+module RaidBossItemDropsHelper
+end

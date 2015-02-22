@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Blizzard:</strong>
+  <%= @raid_boss_loot_item.blizzard_id %>
+</p>
+
+<p>
+  <strong>Raid boss:</strong>
+  <%= @raid_boss_loot_item.raid_boss %>
+</p>
+
+<%= link_to 'Edit', edit_raid_boss_loot_item_path(@raid_boss_loot_item) %> |
+<%= link_to 'Back', raid_boss_loot_items_path %>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Raid Boss Loot Items</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Blizzard</th>
+      <th>Raid boss</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @raid_boss_loot_items.each do |raid_boss_loot_item| %>
+      <tr>
+        <td><%= raid_boss_loot_item.blizzard_id %></td>
+        <td><%= raid_boss_loot_item.raid_boss %></td>
+        <td><%= link_to 'Show', raid_boss_loot_item %></td>
+        <td><%= link_to 'Edit', edit_raid_boss_loot_item_path(raid_boss_loot_item) %></td>
+        <td><%= link_to 'Destroy', raid_boss_loot_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Raid boss loot item', new_raid_boss_loot_item_path %>

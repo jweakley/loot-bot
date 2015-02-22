@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Raid Members</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Character name</th>
+      <th>Realm</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @raid_members.each do |raid_member| %>
+      <tr>
+        <td><%= raid_member.character_name %></td>
+        <td><%= raid_member.realm %></td>
+        <td><%= link_to 'Show', raid_member %></td>
+        <td><%= link_to 'Edit', edit_raid_member_path(raid_member) %></td>
+        <td><%= link_to 'Destroy', raid_member, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Raid member', new_raid_member_path %>

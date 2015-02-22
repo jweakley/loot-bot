@@ -1,0 +1,2 @@
+module RaidMembersHelper
+end

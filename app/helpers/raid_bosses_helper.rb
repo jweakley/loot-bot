@@ -1,0 +1,2 @@
+module RaidBossesHelper
+end

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Character name:</strong>
+  <%= @raid_member.character_name %>
+</p>
+
+<p>
+  <strong>Realm:</strong>
+  <%= @raid_member.realm %>
+</p>
+
+<%= link_to 'Edit', edit_raid_member_path(@raid_member) %> |
+<%= link_to 'Back', raid_members_path %>
